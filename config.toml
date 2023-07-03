@@ -1,0 +1,27 @@
+# Set the interval, how often to check the certificates
+interval = 60
+
+[[host]]
+hostname = "dns.seby.io"
+port = "443"
+
+[[host]]
+hostname = "doh.seby.io"
+port = "443"
+
+[[host]]
+hostname = "doh-2.seby.io"
+port = "443"
+
+[[host]]
+hostname = "dot.seby.io"
+port = "443"
+
+# Settings to send email alerts
+[smtp]
+to = "hello@example.com"
+from = "hello@example.com"
+server = "smtp.example.com"
+port = 587
+username = "your_username"
+password = "your_password"

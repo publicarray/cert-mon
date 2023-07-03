@@ -1,0 +1,13 @@
+[Unit]
+Description=Certificate Monitor
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/cert-mon
+WorkingDirectory=/usr/local/bin
+Restart=always
+User=nobody
+Group=nogroup
+
+[Install]
+WantedBy=multi-user.target
