@@ -1,27 +1,28 @@
 # Set the interval, how often to check the certificates
-interval = 60
+interval = 1440
 
 [[host]]
 hostname = "dns.seby.io"
-port = "443"
 
 [[host]]
 hostname = "doh.seby.io"
-port = "443"
 
 [[host]]
 hostname = "doh-2.seby.io"
-port = "443"
 
 [[host]]
 hostname = "dot.seby.io"
 port = "443"
 
+[[host]]
+hostname = "expired.badssl.com"
+
 # Settings to send email alerts
+# TLS wraper only
 [smtp]
 to = "hello@example.com"
 from = "hello@example.com"
 server = "smtp.example.com"
-port = 587
 username = "your_username"
 password = "your_password"
+port = 465
