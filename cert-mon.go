@@ -171,7 +171,7 @@ func checkCertificate(host HostConfig, checkInterval time.Duration, smtpConfig S
 		// Check the expiration date of the leaf certificate
 		expirationDate := certs[0].NotAfter
 		daysRemaining := int(time.Until(expirationDate).Hours() / 24)
-		fmt.Printf("Days remaining until certificate expiration for %s:%s - %d\n", host.Hostname, host.Port, daysRemaining)
+		fmt.Printf("Days remaining until certificate expiration for %s:%s | %d days\n", host.Hostname, host.Port, daysRemaining)
 
 		// Send an email if the certificate is expiring within 10 days
 		if daysRemaining <= 10 {
